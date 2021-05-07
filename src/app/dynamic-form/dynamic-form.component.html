@@ -1,1 +1,13 @@
-<p>dynamic-form works!</p>
+<form [formGroup]='studentInfo'>
+    <div>
+        <label>姓名:</label>
+        <input type="text" formControlName='name'>
+    </div>
+    <div>
+        <label>年纪:</label>
+        <input type="number" formControlName='age'>
+    </div>
+    <div>
+        <button (click)='save()' type="button">提交</button>
+    </div>
+</form>

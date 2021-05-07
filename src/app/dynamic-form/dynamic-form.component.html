@@ -1,13 +1,16 @@
 <form [formGroup]='studentInfo'>
     <div>
         <label>姓名:</label>
-        <input type="text" formControlName='name'>
+        <input class="ipt" type="text" formControlName='name'>
+        <p class="error-msg" *ngIf='formControls["name"].touched&&formControls["name"].errors?.required'>姓名不能为空</p>
+        <p class="error-msg" *ngIf='formControls["name"].touched&&formControls["name"].errors?.minlength'>姓名至少为三个字符</p>
     </div>
     <div>
         <label>年纪:</label>
-        <input type="number" formControlName='age'>
+        <input class="ipt" type="number" formControlName='age'>
     </div>
     <div>
         <button (click)='save()' type="button">提交</button>
+        <!-- <button (click)='save()' type="button" [disabled]='!studentInfo.valid'>提交</button> -->
     </div>
 </form>

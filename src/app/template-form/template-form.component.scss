@@ -1,0 +1,35 @@
+:host {
+    form {
+        div {
+            margin-bottom: 12px;
+
+            label {
+                display: inline-block;
+                width: 60px;
+            }
+
+            .ipt {
+                height: 26px;
+
+                &.ng-untouched {
+                    border-color: gray !important;
+                }
+
+                &.ng-invalid {
+                    border-color: red;
+                }
+            }
+
+            .error-msg {
+                color: red;
+                font-size: 12px;
+
+                &.hidden {
+                    display: none;
+                }
+
+
+            }
+        }
+    }
+}

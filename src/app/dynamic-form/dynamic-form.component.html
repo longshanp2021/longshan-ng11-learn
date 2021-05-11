@@ -10,7 +10,8 @@
         <input class="ipt" type="number" formControlName='age'>
     </div>
     <div>
-        <button (click)='save()' type="button">提交</button>
-        <!-- <button (click)='save()' type="button" [disabled]='!studentInfo.valid'>提交</button> -->
+        <!-- <button (click)='save()' type="button" [disabled]='isUnchanged'>提交</button> -->
+        <button (click)='save()' type="button" [disabled]='!studentInfo.valid'>提交</button>
     </div>
 </form>
+<p class="p">我是p标签</p>

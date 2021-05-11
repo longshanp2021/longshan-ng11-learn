@@ -1,0 +1,27 @@
+<!-- ng怎么理解title是什么 -->
+<h1>标题: {{title}}</h1>
+
+<!-- 在html标签上以井号开头,写上一个变量,叫做模版引用变量 -->
+<span #span1>开心就好</span>
+
+<p>{{span1.InnerHTML}}</p>
+
+<input type="text" name="studentName" #nameIpt>
+
+<p>输入框的值:{{nameIpt.name}}</p>
+
+<p>{{ 1 + 1}}</p>
+
+<input type="text" placeholder="请输入文字">
+<input type="text" [placeholder]="tip1">
+<button (click)='save()'>提交</button>
+
+
+<div *ngFor='let it of arr'>
+    <!-- it是模版输入变量 -->
+    <span>{{it}}</span>
+</div>
+
+<h3>Current cusromer:{{CurrentCusromer}}</h3>
+<p>The sum of 1+1 is {{1+1}}.</p>
+{{1+1}}

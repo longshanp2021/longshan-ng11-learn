@@ -23,4 +23,4 @@ import { TemplateBasicComponent } from './template-basic/template-basic.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {             }
+export class AppModule {            }

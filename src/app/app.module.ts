@@ -1,26 +1,22 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
-import { DynamicControlComponent } from './dynamic-control/dynamic-control.component';
-import { TemplateFormComponent } from './template-form/template-form.component';
-import { TemplateBasicComponent } from './template-basic/template-basic.component';
+import { CarouselViewerComponent } from './components/carousel-viewer/carousel-viewer.component';
+import { UploadDialogComponent } from './components/upload-dialog/upload-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent,
-    DynamicControlComponent,
-    TemplateFormComponent,
-    TemplateBasicComponent
+    CarouselViewerComponent,
+    UploadDialogComponent
+
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {            }
+export class AppModule { }

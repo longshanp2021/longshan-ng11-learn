@@ -1,1 +1,8 @@
-<h1>Hello Angular</h1>
+<div class="navbar">
+    <p class="title" routerLink="/">Angular学习</p>
+    <a class="nav" routerLink="/home" routerLinkActive="active">主页</a>
+    <a class="nav" routerLink="/interpolation-learn" routerLinkActive="active">插值表达式</a>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

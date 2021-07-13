@@ -1,0 +1,5 @@
+<form [formGroup]='personInfo' #myform='ngForm'>
+    <label>姓名:</label>
+    <input type="text" formControlName='name'>
+    <p *ngIf='formControls["name"].touched&&formControls["name"].errors?.required'>姓名不能为空!</p>
+</form>

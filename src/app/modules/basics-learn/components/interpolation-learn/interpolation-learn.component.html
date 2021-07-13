@@ -1,0 +1,36 @@
+<h1>插值表达式,在花括号里写什么?</h1>
+<h3>1.可以写对应组件模板变量的值</h3>
+<p>Current customer:{{currentCustomer}}</p>
+<h3>2.可以写显示标题文本和图像</h3>
+<p>title</p>
+<div><img src="{{itemImageUrl}}"></div>
+<h3>3.可以写模板表达式</h3>
+<p>The sum of 1+1 is {{1+1}}.</p>
+<p>The sum of 1+2 is not {{1+1+getVel()}}.</p>
+<h3>4.可以写表示上下文</h3>
+<ul>
+    <li *ngFor='let customer of curstomers'>名字:{{customer.name}}--年纪{{customer.age}}</li>
+
+</ul>
+<h3>5.可以写模板引用变量</h3>
+<div (keyup)="0">
+    <label>Type something:
+        <input #customerInput>{{customerInput.value}}
+    </label>
+</div>
+<h3>防止命名冲突</h3>
+<h4>表达式求值的上下文是模板变量,指令的上下文对象以及组件成员的并集,如果所引用的名称在多个命名空间都有,则angular将应用以及逻辑来确定上下文:</h4>
+<p>1.模板变量的名称</p>
+<p>2.指令上下文中的名称</p>
+<p>3.组件成员的名称</p>
+
+<input type="text" #i>
+<p>{{i.value}}</p>
+
+<!-- <h1 id="myTitle" class="n1 n2 n3" #h>我是标题</h1>
+<span>{{h.className}}</span>
+
+<label>Type something:
+    <input #title>{{title}}
+</label> -->
+<button (click)='test()'>刷新</button>

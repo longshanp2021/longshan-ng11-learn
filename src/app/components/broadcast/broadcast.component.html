@@ -1,0 +1,19 @@
+<div class="message">
+    <span>消息内容:</span>
+    <input type="text" [(ngModel)]='message'>
+    <button (click)='publishMessage()'>发布消息</button>
+</div>
+
+<div class="persons">
+    <div class="item">
+        <h4>小明</h4>
+        <button (click)='xiaomingSubscribe()'>订阅</button>
+        <button (click)='xiaomingUnSubscribe()'>取消订阅</button>
+    </div>
+
+    <div class="item">
+        <h4>乐乐</h4>
+        <button (click)='leleSubscribe()'>订阅</button>
+        <button (click)='leleUnSubscribe()'>取消订阅</button>
+    </div>
+</div>

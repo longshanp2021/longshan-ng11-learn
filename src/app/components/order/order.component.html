@@ -1,0 +1,21 @@
+<h1>My First Attribute Directive</h1>
+
+<h2>Pick a highlight color</h2>
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color" (appDegree)='degree($event)'>鼠标移动进来{{time}}次</p>
+
+
+<div id="skdfjkd" class="box1" appHighlight (appDegree)='time2=$event' #box1='appHighlight' #box11>
+    鼠标移动进来{{time2}}次
+    <span>degree的值是{{box11.id}}</span>
+</div>
+
+<div class="box2" #box2>
+    box2 {{box2.degree}}
+</div>
+
+<!-- <h1>{{}}</h1> -->

@@ -1,0 +1,24 @@
+:host {
+    div.message {
+        margin-bottom: 20px;
+
+        &>* {
+            margin-right: 8px;
+        }
+
+        input {
+            padding: 4px;
+        }
+    }
+
+    div.persons {
+        div.item {
+            margin-bottom: 20px;
+        }
+    }
+
+    button {
+        padding: 4px 6px;
+        margin-right: 12px;
+    }
+}

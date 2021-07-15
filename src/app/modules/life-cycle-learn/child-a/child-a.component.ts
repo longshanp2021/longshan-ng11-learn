@@ -8,29 +8,29 @@ import { Logger } from "../../../logger";
 export class ChildAComponent extends Logger {
   title: string = 'childA';
   ngOnChanges() {
-    console.log(`${this.title},ngOnChanges`);
+    console.log(`1${this.title},ngOnChanges`);
 
   };
   ngOnInit() {
-    console.log(`${this.title},ngOnInit`);
+    console.log(`2${this.title},ngOnInit`);
   };
   ngDoCheck() {
-    console.log(`${this.title},ngDoCheck`);
+    console.log(`3${this.title},ngDoCheck`);
   };
   ngAfterContentInit() {
-    console.log(`${this.title},ngAfterContentInit`);
+    console.log(`4${this.title},ngAfterContentInit`);
   };
   ngAfterContentChecked() {
-    console.log(`${this.title},ngAfterContentChecked`);
+    console.log(`5${this.title},ngAfterContentChecked`);
   };
   ngAfterViewInit() {
-    console.log(`${this.title},ngAfterViewInit`);
+    console.log(`6${this.title},ngAfterViewInit`);
   };
   ngAfterViewChecked() {
-    console.log(`${this.title},ngAfterViewChecked`);
+    console.log(`7${this.title},ngAfterViewChecked`);
   };
   ngOnDestroy() {
-    console.log(`${this.title},ngOnDestroy`);
+    console.log(`8${this.title},ngOnDestroy`);
   };
 
 }

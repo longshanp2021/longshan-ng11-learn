@@ -17,6 +17,7 @@ import { HighlightDirective } from './highlight.directive';
 import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { TrainingComponent } from './components/training/training.component';
 import { StorageService } from "./services/storage.service";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { StorageService } from "./services/storage.service";
         BrowserAnimationsModule,
         AppRoutingModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     providers: [StorageService],
     bootstrap: [AppComponent]

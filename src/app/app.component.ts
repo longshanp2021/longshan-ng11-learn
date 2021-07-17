@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-root',
@@ -7,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
     parentItem = 'lamp';
-    public constructor() {
+    public menuOpen = true;
+    public constructor(
+        private router: Router
+    ) {
 
     }
 
     public ngOnInit(): void {
 
+    }
+
+    public goto(url: string): void {
+        this.router.navigateByUrl(url);
     }
 }

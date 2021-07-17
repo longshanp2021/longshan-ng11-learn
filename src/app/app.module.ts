@@ -18,6 +18,15 @@ import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { TrainingComponent } from './components/training/training.component';
 import { StorageService } from "./services/storage.service";
 import { HttpClientModule } from '@angular/common/http';
+import { FruitsService } from './modules/fruits/components/services/fruits.service';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+
+registerLocaleData(en);
+
 
 @NgModule({
     declarations: [
@@ -33,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
         OrderComponent,
         HighlightDirective,
         BroadcastComponent,
-        TrainingComponent
+        TrainingComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,9 +50,10 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        NzMenuModule
     ],
-    providers: [StorageService],
+    providers: [StorageService,FruitsService, { provide: NZ_I18N, useValue: en_US }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

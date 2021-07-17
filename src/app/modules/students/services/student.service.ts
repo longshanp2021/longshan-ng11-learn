@@ -16,5 +16,9 @@ export class StudentService {
     return this.http.get<Array<IStudent>>(`${this.apiGateway}/students`);
   }
 
+  public create(data: IStudent): Observable<IStudent> {
+    return this.http.post<IStudent>(`${this.apiGateway}/students`, data);
+  }
+
 
 }

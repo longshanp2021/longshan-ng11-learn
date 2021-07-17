@@ -22,9 +22,9 @@ const routes: Routes = [
     { path: 'service-learn', loadChildren: () => import('./modules/service-learn/service-learn.module').then(m => m.ServiceLearnModule) },
     { path: 'form-learn', loadChildren: () => import('./modules/form-learn/form-learn.module').then(m => m.FormLearnModule) },
     { path: 'basics-learn', loadChildren: () => import('./modules/basics-learn/basics-learn.module').then(m => m.BasicsLearnModule) },
-
     { path: 'life-cycle-learn', loadChildren: () => import('./modules/life-cycle-learn/life-cycle-learn.module').then(m => m.LifeCycleLearnModule) },
     { path: 'students', loadChildren: () => import('./modules/students/students.module').then(m => m.StudentsModule) },
+    { path: 'fruits', loadChildren: () => import('./modules/fruits/fruits.module').then(m => m.FruitsModule) },
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: '**', redirectTo: 'home' }
 ];

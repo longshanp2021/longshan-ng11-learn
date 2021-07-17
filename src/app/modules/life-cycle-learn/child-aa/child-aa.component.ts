@@ -9,29 +9,29 @@ export class ChildAAComponent extends Logger {
 
   title: string = 'childAA';
   ngOnChanges() {
-    console.log(`1${this.title},ngOnChanges`);
+    console.log(`${this.title},ngOnChanges`);
 
   };
   ngOnInit() {
-    console.log(`2${this.title},ngOnInit`);
+    console.log(`${this.title},ngOnInit`);
   };
   ngDoCheck() {
-    console.log(`3${this.title},ngDoCheck`);
+    // console.log(`${this.title},ngDoCheck`);
   };
   ngAfterContentInit() {
-    console.log(`4${this.title},ngAfterContentInit`);
+    console.log(`${this.title},ngAfterContentInit`);
   };
   ngAfterContentChecked() {
-    console.log(`5${this.title},ngAfterContentChecked`);
+    // console.log(`${this.title},ngAfterContentChecked`);
   };
   ngAfterViewInit() {
-    console.log(`6${this.title},ngAfterViewInit`);
+    console.log(`${this.title},ngAfterViewInit`);
   };
   ngAfterViewChecked() {
-    console.log(`7${this.title},ngAfterViewChecked`);
+    // console.log(`${this.title},ngAfterViewChecked`);
   };
   ngOnDestroy() {
-    console.log(`8${this.title},ngOnDestroy`);
+    console.log(`${this.title},ngOnDestroy`);
   };
 
 

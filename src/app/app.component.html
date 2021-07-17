@@ -1,5 +1,5 @@
 <div class="navbar">
-    <p class="title" routerLink="/">Angular学习</p>
+    <!-- <p class="title" routerLink="/">Angular学习</p>
     <a class="nav" routerLink="/home" routerLinkActive="active">主页</a>
     <a class="nav" routerLink="/basics-learn" routerLinkActive="active">基础学习</a>
     <a class="nav" routerLink="/service-learn" routerLinkActive="active">服务学习</a>
@@ -8,14 +8,58 @@
     <a class="nav" routerLink="/table-learn" routerLinkActive="active">学生动态表格</a>
     <a class="nav" routerLink="/hero-form" routerLinkActive="active">英雄表单</a>
     <a class="nav" routerLink="/hero" routerLinkActive="active">英雄</a>
+
     <a class="nav" routerLink="/communication" routerLinkActive="active">父子组件通信</a>
     <a class="nav" routerLink="/child" routerLinkActive="active">子组件</a>
     <a class="nav" routerLink="/order" routerLinkActive="active">指令</a>
+    <a class="nav" routerLink="/view-child" routerLinkActive="active">视图练习</a>
     <a class="nav" routerLink="/broadcast" routerLinkActive="active">消息订阅</a>
     <a class="nav" routerLink="/training" routerLinkActive="active">消息订阅练习</a>
     <a class="nav" routerLink="/students" routerLinkActive="active">项目实战</a>
+    <a class="nav" routerLink="/fruits" routerLinkActive="active">项目实战2</a> -->
 
-
+    <ul nz-menu nzMode="inline" nzTheme="dark">
+        <!-- <li nz-submenu nzTitle="Navigation One" nzIcon="mail" nzOpen>
+            <ul>
+                <li nz-menu-group nzTitle="Item 1">
+                    <ul>
+                        <li nz-menu-item nzSelected>Option 1</li>
+                        <li nz-menu-item>Option 2</li>
+                    </ul>
+                </li>
+                <li nz-menu-group nzTitle="Item 2">
+                    <ul>
+                        <li nz-menu-item>Option 3</li>
+                        <li nz-menu-item>Option 4</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="Navigation Two" nzIcon="appstore">
+            <ul>
+                <li nz-menu-item>Option 5</li>
+                <li nz-menu-item>Option 6</li>
+                <li nz-submenu nzTitle="Submenu">
+                    <ul>
+                        <li nz-menu-item>Option 7</li>
+                        <li nz-menu-item>Option 8</li>
+                        <li nz-submenu nzTitle="Submenu">
+                            <ul>
+                                <li nz-menu-item>Option 9</li>
+                                <li nz-menu-item>Option 10</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li> -->
+        <li nz-submenu nzTitle="项目实战" nzIcon="coffee" [nzOpen]='menuOpen'>
+            <ul>
+                <li nz-menu-item (click)='goto("/students/student-list")'>学生列表</li>
+                <li nz-menu-item (click)='goto("/fruits/fruits-list")'>水果列表</li>
+            </ul>
+        </li>
+    </ul>
 </div>
 <div class="content">
     <router-outlet></router-outlet>

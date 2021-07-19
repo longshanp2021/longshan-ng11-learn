@@ -53,7 +53,12 @@ registerLocaleData(en);
         HttpClientModule,
         NzMenuModule
     ],
-    providers: [StorageService,FruitsService, { provide: NZ_I18N, useValue: en_US }],
+    providers: [
+        { provide: NZ_I18N, useValue: en_US },
+        StorageService,
+        FruitsService,
+        // MyCalculatorService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

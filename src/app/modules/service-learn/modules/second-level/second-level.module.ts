@@ -10,9 +10,9 @@ import { SecondLevelCopyComponent } from './second-level-copy/second-level-copy.
   imports: [
     CommonModule
   ],
-  providers: [
-    MyCalculatorService
-  ],
+  // providers: [
+  //   MyCalculatorService
+  // ],
   exports: [
     SecondLevelComponent,
     SecondLevelCopyComponent

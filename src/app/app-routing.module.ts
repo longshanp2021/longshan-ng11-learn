@@ -25,6 +25,7 @@ const routes: Routes = [
     { path: 'life-cycle-learn', loadChildren: () => import('./modules/life-cycle-learn/life-cycle-learn.module').then(m => m.LifeCycleLearnModule) },
     { path: 'students', loadChildren: () => import('./modules/students/students.module').then(m => m.StudentsModule) },
     { path: 'fruits', loadChildren: () => import('./modules/fruits/fruits.module').then(m => m.FruitsModule) },
+    { path: 'http-learn', loadChildren: () => import('./modules/http-learn/http-learn.module').then(m => m.HttpLearnModule) },
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: '**', redirectTo: 'home' }
 ];

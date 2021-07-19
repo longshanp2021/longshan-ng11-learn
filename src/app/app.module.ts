@@ -18,7 +18,7 @@ import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { TrainingComponent } from './components/training/training.component';
 import { StorageService } from "./services/storage.service";
 import { HttpClientModule } from '@angular/common/http';
-import { FruitsService } from './modules/fruits/components/services/fruits.service';
+import { FruitsService } from './modules//fruits/services/fruits.service';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';

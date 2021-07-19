@@ -13,7 +13,7 @@ export class StudentListComponent implements OnInit {
   id: number = 0;
   name: string;
   age: number;
-  // remark: string;
+  remark: string;
   public editFormVisible: boolean;
   public students: Array<IStudent>;
   @ViewChild(StudentEditComponent)
@@ -21,25 +21,20 @@ export class StudentListComponent implements OnInit {
   public constructor(
     public studentSrv: StudentService
   ) { }
-
   public ngOnInit(): void {
     this.queryStudent();
   }
-
   public addStudent() {
     this.editFormVisible = !this.editFormVisible;
   }
-
   public queryStudent() {
     this.studentSrv.query().subscribe(students => {
       this.students = students;
     });
   }
-
   public closeEditFormModal() {
     this.editFormVisible = false;
   }
-
   public saveStudent(): void {
     this.studentSrv.create(this.editForm.form.value).subscribe(student => {
       this.queryStudent();

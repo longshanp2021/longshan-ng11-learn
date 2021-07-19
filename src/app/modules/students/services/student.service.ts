@@ -20,5 +20,4 @@ export class StudentService {
     return this.http.post<IStudent>(`${this.apiGateway}/students`, data);
   }
 
-
 }

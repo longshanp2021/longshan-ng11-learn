@@ -7,14 +7,15 @@ import { FormGroup, FormBuilder } from "@angular/forms";
   styleUrls: ['./student-edit.component.scss']
 })
 export class StudentEditComponent implements OnInit {
-
   public form: FormGroup;
   public constructor(
     private fb: FormBuilder
   ) {
     this.form = fb.group({
       name: [],
-      age: []
+      age: [],
+      id: [],
+      remark: []
     });
   }
 

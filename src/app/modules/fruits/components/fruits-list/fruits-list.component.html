@@ -1,2 +1,43 @@
-<p>fruits-list works!</p>
-<p *ngFor='let it of fruits'>id:{{it.id}}--姓名:{{it.name}}</p>
+<div class="head form">
+    <h3>水果列表</h3>
+    <div class="ipt-box">
+        <label>Id:</label>
+        <input type="text" class="ipt" nz-input [(ngModel)]='Id'>
+    </div>
+    <div class="ipt-box">
+        <label>水果名:</label>
+        <input type="text" nz-input class="ipt" [(ngModel)]='name'>
+    </div>
+
+    <div class="buttons">
+        <button nz-button nzType="primary" (click)='addFruits()'>添加</button>
+        <button nz-button nzType="primary">清空</button>
+    </div>
+
+</div>
+
+<nz-table #basicTable [nzData]="fruits">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>姓名</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+        </tr>
+    </tbody>
+</nz-table>
+
+<nz-modal [(nzVisible)]="editFormVisible" (nzOnCancel)="closeEditFormModal()" [nzWidth]='800' nzTitle="新增水果信息">
+    <app-fruits-edit *nzModalContent></app-fruits-edit>
+
+    <ng-template [nzModalFooter]>
+        <div class="buttons">
+            <button nz-button nzType="default" (click)="closeEditFormModal()">取消</button>
+            <button nz-button nzType="primary" (click)="saveFruits()">保存</button>
+        </div>
+    </ng-template>
+</nz-modal>

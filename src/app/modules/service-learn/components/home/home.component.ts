@@ -9,7 +9,7 @@ import { MessageService } from '../../services/message.service';
 export class HomeComponent implements OnInit {
 
   public constructor(
-    private msSrv: MessageService
+
   ) {
 
   }

@@ -7,6 +7,8 @@ import { Level1Component } from './components/level1/level1.component';
 import { Level2Component } from './components/level2/level2.component';
 import { Level3Component } from './components/level3/level3.component';
 import { MessageService } from './services/message.service';
+import { FirstLevelModule } from './modules/first-level/first-level.module';
+import { MyCalculatorService } from './services/my-calculator.service';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { MessageService } from './services/message.service';
   ],
   imports: [
     CommonModule,
-    ServiceLearnRoutingModule
+    ServiceLearnRoutingModule,
+    FirstLevelModule
   ],
   providers:[
-    MessageService
+    MessageService,
+    // MyCalculatorService
   ]
 })
 export class ServiceLearnModule { }

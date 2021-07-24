@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IFruits } from '../components/models/i-fruits';
+import { IFruits } from '../models/i-fruits';
 
 @Injectable()
 export class FruitsService {

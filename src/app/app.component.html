@@ -21,13 +21,19 @@
         <li nz-submenu nzTitle="Angular学习" nzIcon="coffee" [nzOpen]='menuOpen'>
             <ul>
                 <li nz-menu-item (click)='goto("/http-learn/home")'>http</li>
-                <li nz-menu-item (click)='goto("/service-learn")'>服务</li>
             </ul>
         </li>
         <li nz-submenu nzTitle="项目实战" nzIcon="coffee" [nzOpen]='menuOpen'>
             <ul>
                 <li nz-menu-item (click)='goto("/students/student-list")'>学生列表</li>
                 <li nz-menu-item (click)='goto("/fruits/fruits-list")'>水果列表</li>
+                <li nz-menu-item (click)='goto("/cars/cars-list")'>汽车列表</li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="组件库学习" nzIcon="coffee" [nzOpen]='menuOpen'>
+            <ul>
+                <li nz-menu-item (click)='goto("/ant-learn/home")'>home</li>
+                <li nz-menu-item (click)='goto("/ant-learn/modal-learn")'>对话框学习</li>
             </ul>
         </li>
     </ul>

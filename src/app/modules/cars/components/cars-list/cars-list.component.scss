@@ -1,0 +1,14 @@
+:host {
+    & .locaction {
+        display: flex;
+        flex-direction: row;
+    }
+
+    input {
+        margin-right: 12px;
+    }
+
+    button {
+        margin-right: 12px;
+    }
+}

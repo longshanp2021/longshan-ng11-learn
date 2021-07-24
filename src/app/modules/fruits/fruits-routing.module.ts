@@ -6,7 +6,8 @@ import { FruitsListComponent } from './components/fruits-list/fruits-list.compon
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'fruits-list', component: FruitsListComponent },
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

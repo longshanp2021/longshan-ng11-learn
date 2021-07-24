@@ -1,0 +1,10 @@
+:host {
+    &.box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div {
+        margin-bottom: 12px;
+    }
+}

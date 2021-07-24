@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IFruits } from "../models/i-fruits";
+import { IFruits } from "../../models/i-fruits";
 import { FruitsService } from "../../services/fruits.service";
 import { FruitsEditComponent } from "../fruits-edit/fruits-edit.component";
 @Component({

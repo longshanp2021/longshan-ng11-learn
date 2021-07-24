@@ -49,7 +49,6 @@
 
 <nz-modal [(nzVisible)]="editFormVisible" (nzOnCancel)="closeEditFormModal()" [nzWidth]='800' nzTitle="新增学生信息">
     <app-student-edit *nzModalContent></app-student-edit>
-
     <ng-template [nzModalFooter]>
         <div class="buttons">
             <button nz-button nzType="default" (click)="closeEditFormModal()">取消</button>
@@ -57,26 +56,3 @@
         </div>
     </ng-template>
 </nz-modal>
-
-<!-- <table class="ipt-tb">
-    <thead>
-        <tr>
-            <th>序号</th>
-            <th>姓名</th>
-            <th>年纪</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor='let item of students'>
-            <th>
-                {{item.id}}
-            </th>
-            <th>
-                {{item.name}}
-            </th>
-            <th>
-                {{item.age}}
-            </th>
-        </tr>
-    </tbody>
-</table> -->

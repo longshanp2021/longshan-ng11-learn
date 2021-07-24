@@ -26,6 +26,8 @@ const routes: Routes = [
     { path: 'students', loadChildren: () => import('./modules/students/students.module').then(m => m.StudentsModule) },
     { path: 'fruits', loadChildren: () => import('./modules/fruits/fruits.module').then(m => m.FruitsModule) },
     { path: 'http-learn', loadChildren: () => import('./modules/http-learn/http-learn.module').then(m => m.HttpLearnModule) },
+    { path: 'ant-learn', loadChildren: () => import('./modules/ant-learn/ant-learn.module').then(m => m.AntLearnModule) },
+    { path: 'cars', loadChildren: () => import('./modules/cars/cars.module').then(m => m.CarsModule) },
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: '**', redirectTo: 'home' }
 ];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from "@angular/forms";
-import {debounceTime  } from "rxjs/operators";
+import { debounceTime } from "rxjs/operators";
 
 @Component({
   selector: 'app-form-reactive',
@@ -16,14 +16,18 @@ export class FormReactiveComponent implements OnInit {
     public fb: FormBuilder) {
     this.personInfo = this.fb.group({
       name: [undefined, [Validators.required, Validators.minLength(2), Validators.maxLength(4)]],
+      age: [undefined, [Validators.required]]
     });
   }
 
   ngOnInit(): void {
     this.personInfo.valueChanges
-    .pipe(debounceTime(200))
-    .subscribe(ms => console.log(ms));
+      .pipe(debounceTime(200))
+      .subscribe(ms => console.log(ms));
   }
+  public getPatchValue() {
+    // this.personInfo.patchValue({ name: '小明', age: 12 })
 
+  }
 
 }

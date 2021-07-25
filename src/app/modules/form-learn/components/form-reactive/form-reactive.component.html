@@ -2,4 +2,9 @@
     <label>姓名:</label>
     <input type="text" formControlName='name'>
     <p *ngIf='formControls["name"].touched&&formControls["name"].errors?.required'>姓名不能为空!</p>
+    <label>年龄:</label>
+    <input type="text" formControlName='age'>
+    <p *ngIf='formControls["name"].touched&&formControls["name"].errors?.required'>年龄不能为空!</p>
+    <br>
+    <button (click)='getPatchValue()'>点击</button>
 </form>

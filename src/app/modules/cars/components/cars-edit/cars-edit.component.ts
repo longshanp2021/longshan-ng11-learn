@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./cars-edit.component.scss']
 })
 export class CarsEditComponent implements OnInit {
-  public form: FormGroup
+  public form: FormGroup;
   public name: string;
   public age: number;
   public constructor(private fb: FormBuilder) {
@@ -20,7 +20,7 @@ export class CarsEditComponent implements OnInit {
 
   public ngOnInit(): void {
   }
+  
   public submitForm(): void {
-
   }
 }

@@ -12,6 +12,7 @@ import { FormsModule ,ReactiveFormsModule} from "@angular/forms";
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 @NgModule({
   declarations: [HomeComponent, CarsListComponent, CarsEditComponent],
   imports: [
@@ -24,7 +25,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     ReactiveFormsModule,
     NzModalModule,
     NzFormModule,
-    NzIconModule
+    NzIconModule,
+    NzInputNumberModule
   ],
   providers: [CarsService]
 })

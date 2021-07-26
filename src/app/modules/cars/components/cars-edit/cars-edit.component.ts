@@ -20,7 +20,7 @@ export class CarsEditComponent implements OnInit {
 
   public ngOnInit(): void {
   }
-  
+
   public submitForm(): void {
   }
 }

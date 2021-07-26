@@ -14,7 +14,6 @@ import { ChildComponent } from './components/child/child.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { OrderComponent } from './components/order/order.component';
 import { HighlightDirective } from './highlight.directive';
-import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { TrainingComponent } from './components/training/training.component';
 import { StorageService } from "./services/storage.service";
 import { HttpClientModule } from '@angular/common/http';
@@ -41,7 +40,6 @@ registerLocaleData(en);
         CommunicationComponent,
         OrderComponent,
         HighlightDirective,
-        BroadcastComponent,
         TrainingComponent,
     ],
     imports: [
@@ -57,7 +55,6 @@ registerLocaleData(en);
         { provide: NZ_I18N, useValue: en_US },
         StorageService,
         FruitsService,
-        // MyCalculatorService
     ],
     bootstrap: [AppComponent]
 })

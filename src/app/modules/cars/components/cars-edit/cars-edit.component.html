@@ -1,16 +1,14 @@
 <form nz-form [formGroup]="form" (ngSubmit)="submitForm()">
     <div class="box">
-
         <div>
-            <nz-form-label nzFor="name" nzRequired>车名:</nz-form-label>
+            <nz-form-label nzFor="name" nzRequired>车名</nz-form-label>
             <input style="width: 250px" nz-input placeholder="请输入车名" [(ngModel)]="name" formControlName="name"
                 id="name" />
         </div>
-
         <div>
-            <nz-form-label nzFor="age" nzRequired>车龄:</nz-form-label>
-            <nz-input-number style="width: 250px" nz-input placeholder="请输入车龄" [(ngModel)]="age" formControlName="age"id="age"></nz-input-number>
+            <nz-form-label nzFor="age" nzRequired>车龄</nz-form-label>
+            <nz-input-number style="width: 250px" nz-input nzPlaceHolder="请输入车龄" [(ngModel)]="age" formControlName="age"
+                id="age"></nz-input-number>
         </div>
-
     </div>
 </form>

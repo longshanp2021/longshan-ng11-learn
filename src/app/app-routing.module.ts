@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { ChildComponent } from './components/child/child.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { HeroFormComponent } from './components/hero-form/hero-form.component';
@@ -16,7 +15,6 @@ const routes: Routes = [
     { path: 'hero', component: HomeComponent },
     { path: 'communication', component: CommunicationComponent },
     { path: 'order', component: OrderComponent },
-    { path: 'broadcast', component: BroadcastComponent },
     { path: 'training', component: TrainingComponent },
     { path: 'child', component: ChildComponent },
     { path: 'service-learn', loadChildren: () => import('./modules/service-learn/service-learn.module').then(m => m.ServiceLearnModule) },

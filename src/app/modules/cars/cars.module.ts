@@ -13,6 +13,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 @NgModule({
   declarations: [HomeComponent, CarsListComponent, CarsEditComponent],
   imports: [
@@ -26,7 +27,8 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzModalModule,
     NzFormModule,
     NzIconModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzPaginationModule
   ],
   providers: [CarsService]
 })

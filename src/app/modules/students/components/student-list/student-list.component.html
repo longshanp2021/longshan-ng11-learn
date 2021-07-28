@@ -1,42 +1,53 @@
-<!-- <p *ngFor='let it of students'>id:{{it.id}}--姓名:{{it.name}}--年龄:{{it.age}}</p> -->
-
-
-<div class="head form">
+<div class="head form" [formGroup]='form'>
     <h3>学生信息列表</h3>
     <div class="ipt-box">
         <label>姓名:</label>
-        <input type="text" nz-input class="ipt" [(ngModel)]='name'>
+        <input type="text" nz-input class="ipt" formControlName='name'>
     </div>
     <div class="ipt-box">
         <label>年纪:</label>
-        <input type="text" nz-input class="ipt" [(ngModel)]='age'>
+        <input type="text" nz-input class="ipt" formControlName='age'>
     </div>
     <!-- <div class="ipt-box">
-        <label>备注:</label>
-        <input type="text" class="ipt" [(ngModel)]='remark'>
-    </div> -->
+            <label>备注:</label>
+            <input type="text" nz-input class="ipt" formControlName='remark'>
+        </div> -->
     <div class="buttons">
         <button nz-button nzType="primary" (click)='addStudent()'>添加</button>
-        <button nz-button nzType="primary">清空</button>
+        <button nz-button nzType="primary" (click)='resetStudent()'>清空</button>
+        <button nz-button nzType="primary" (click)='findStudent()'>查找</button>
     </div>
-
 </div>
 
 <nz-table #basicTable [nzData]="students">
+
     <thead>
         <tr>
             <th>Id</th>
             <th>姓名</th>
             <th>年纪</th>
-            <th>备注</th>
+            <!-- <th>备注</th> -->
+            <th>编辑</th>
         </tr>
     </thead>
+
     <tbody>
         <tr *ngFor="let data of basicTable.data">
             <td>{{data.id}}</td>
             <td>{{data.name}}</td>
             <td>{{data.age}}</td>
-            <td>{{data.remark}}</td>
+            <!-- <td>{{data.remark}}</td> -->
+            <td>
+                <a (click)='deleteStudent(data.id)'>
+                    <i nz-icon nzType="close-circle" nzTheme="outline"></i>
+                    删除
+                </a>
+                &nbsp;
+                <a (click)='editStudent(data)'>
+                    <i nz-icon nzType="funnel-plot" nzTheme="outline"></i>
+                    更改
+                </a>
+            </td>
 
             <!-- <td>
           <a>Action 一 {{data.name}}</a>
@@ -48,7 +59,7 @@
 </nz-table>
 
 <nz-modal [(nzVisible)]="editFormVisible" (nzOnCancel)="closeEditFormModal()" [nzWidth]='800' nzTitle="新增学生信息">
-    <app-student-edit *nzModalContent></app-student-edit>
+    <app-student-edit ></app-student-edit>
     <ng-template [nzModalFooter]>
         <div class="buttons">
             <button nz-button nzType="default" (click)="closeEditFormModal()">取消</button>

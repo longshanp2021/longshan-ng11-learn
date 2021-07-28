@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { ICar } from '../model/i-cars';
+import { IQueryResult } from '../model/i-query-result';
+import { map } from 'rxjs/operators';
+
+// export interface IQueryResult{
+//   items:Array<>
+// }
 
 @Injectable()
 
@@ -11,7 +17,7 @@ export class CarsService {
 
   constructor(private http: HttpClient) { }
 
-  public query(name?: string, startAge?: number, endAge?: number): Observable<Array<ICar>> {
+  public query(name?: string, startAge?: number, endAge?: number, page?: number, limit?: number): Observable<IQueryResult<ICar>> {
     let url = `${this.apiGateway}/cars?`;
     if (name) {
       url += `&name_like=${name}`;
@@ -22,8 +28,17 @@ export class CarsService {
     if (endAge) {
       url += `&age_lte=${endAge}`;
     }
-
-    return this.http.get<Array<ICar>>(url);
+    if (page) {
+      url += `&_page=${page}`;
+    }
+    if (limit) {
+      url += `&_limit=${limit}`;
+    }
+    return this.http.get<IQueryResult<ICar>>(url, { observe: 'response' }).pipe(map(res => {
+      const totalStr = res.headers.get('X-Total-Count');
+      const total = Number(totalStr);
+      return { total, items: res.body } as any;
+    }));
   }
 
   public create(data: ICar): Observable<Array<ICar>> {

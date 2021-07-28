@@ -9,13 +9,12 @@ import { FormGroup, FormBuilder } from "@angular/forms";
 export class StudentEditComponent implements OnInit {
   public form: FormGroup;
   public constructor(
-    private fb: FormBuilder
+    public fb: FormBuilder
   ) {
-    this.form = fb.group({
+    this.form = this.fb.group({
       name: [],
       age: [],
       id: [],
-      remark: []
     });
   }
 

@@ -13,11 +13,19 @@ export class StudentService {
   ) { }
 
   public query(): Observable<Array<IStudent>> {
-    return this.http.get<Array<IStudent>>(`${this.apiGateway}/students`);
+    let url = `${this.apiGateway}/students`;
+    return this.http.get<Array<IStudent>>(url);
   }
 
   public create(data: IStudent): Observable<IStudent> {
     return this.http.post<IStudent>(`${this.apiGateway}/students`, data);
   }
 
+  public delete(id: any) {
+    return this.http.delete<IStudent>(`${this.apiGateway}/students/${id}`);
+  }
+
+  public patch(id: any, data: IStudent) {
+    return this.http.patch<IStudent>(`${this.apiGateway}/students/${id}`, data)
+  }
 }

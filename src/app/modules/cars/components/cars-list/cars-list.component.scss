@@ -1,5 +1,7 @@
 :host {
-    & .locaction {
+    position: relative;
+
+    .locaction {
         display: flex;
         flex-direction: row;
     }
@@ -11,4 +13,5 @@
     button {
         margin-right: 12px;
     }
+
 }

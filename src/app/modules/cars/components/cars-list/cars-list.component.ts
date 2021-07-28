@@ -11,12 +11,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./cars-list.component.scss']
 })
 export class CarsListComponent implements OnInit {
+
   @ViewChild(CarsEditComponent)
   public child: CarsEditComponent;
   public form: FormGroup;
-  public name: string;
-  public startAge: number;
-  public endAge: number;
+  public limit: number = 10;
+  public total: number;
+  public disablePaginator: boolean;
   public isVisible = false;
   public value: string;
   public cars: Array<ICar> = [];
@@ -25,23 +26,24 @@ export class CarsListComponent implements OnInit {
     private modalService: NzModalService,
     private fb: FormBuilder
   ) {
-    this.form = fb.group({
+    this.form =this.fb.group({
       name: [],
       startAge: [],
-      endAge: []
-    })
+      endAge: [],
+      page: [1]
+    });
   }
 
   public ngOnInit(): void {
-    this.query();
+    this.findCars();
   }
 
   public onSave(): void {
     this.isVisible = false;
     if (this.child.form.value.id) {
-      this.carSrv.patch(this.child.form.value.id, this.child.form.value).subscribe(() => this.query());
+      this.carSrv.patch(this.child.form.value.id, this.child.form.value).subscribe(() => this.findCars());
     } else {
-      this.carSrv.create(this.child.form.value).subscribe(() => this.query());
+      this.carSrv.create(this.child.form.value).subscribe(() => this.findCars());
     }
   }
 
@@ -58,11 +60,13 @@ export class CarsListComponent implements OnInit {
         nzWidth: '600px',
         nzOnOk: () => {
           this.carSrv.delete(id).subscribe(() => {
-            this.query();
+            this.findCars();
           });
         }
       }
     );
+  }
+  public pageIndex() {
   }
 
   public cleanCars() {
@@ -78,18 +82,23 @@ export class CarsListComponent implements OnInit {
   public editCar(e: Object) {
     this.isVisible = true;
     this.child.form.patchValue(e);
+    // console.log(this.child);
+    
   }
 
-  public findCars(name: string, startAge: number, endAge: number) {
-    this.carSrv.query(name, startAge, endAge).subscribe((cars) => {
-      this.cars = cars
-    });
+  public chagePageIndex(page: number) {
+    console.log(page);
 
+    this.form.patchValue({ page });
+    this.findCars();
   }
 
-  private query() {
-    this.carSrv.query().subscribe((cars) => {
-      this.cars = cars;
+  public findCars() {
+    let data = this.form.value;
+
+    this.carSrv.query(data.name, data.startAge, data.endAge, data.page, this.limit).subscribe(res => {
+      this.cars = res.items;
+      this.total = res.total;
     });
   }
 

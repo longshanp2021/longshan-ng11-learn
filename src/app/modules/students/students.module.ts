@@ -8,10 +8,11 @@ import { StudentsRoutingModule } from './students-routing.module';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentService } from './services/student.service';
-import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StudentEditComponent } from './components/student-edit/student-edit.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzModalModule,
     NzFormModule,
     NzInputNumberModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzIconModule
   ],
   providers: [
     StudentService

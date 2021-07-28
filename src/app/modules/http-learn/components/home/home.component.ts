@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import * as faker from "faker";
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   private apiGateway: string = 'http://localhost:3002';
   public constructor(
     private http: HttpClient
@@ -34,6 +34,16 @@ export class HomeComponent implements OnInit {
     })
 
   };
+  public ceateManyStudents(): void {
+    for (let i = 0; i < 100; i++) {
+      let s = { name: faker.name.findName(), age: faker.random.number({ min: 5, max: 45 }) };
+      this.http.post<any>(`${this.apiGateway}/students/`, { name: s.name, age: s.age }).subscribe(ms => {
+        console.log(ms);
+      })
+    }
+
+  }
+
   public deleteStudent() {
     this.http.delete<any>(`${this.apiGateway}/students/g`).subscribe(ms => {
       console.log(ms);

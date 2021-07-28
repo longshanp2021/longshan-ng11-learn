@@ -1,14 +1,15 @@
 <div class="locaction" [formGroup]='form'>
     <nz-form-label nzFor="name" nzRequired>车名</nz-form-label>
-    <input style="width: 170px" nz-input placeholder="请输入车名" [(ngModel)]="name" formControlName='name' />
+    <input style="width: 170px" nz-input placeholder="请输入车名" formControlName='name' />
     <nz-form-label nzFor="age" nzRequired>车龄区间</nz-form-label>
-    <input style="width: 170px" nz-input placeholder="请输入车龄" [(ngModel)]="startAge" formControlName='startAge' />
-    <input style="width: 170px" nz-input placeholder="请输入车龄" [(ngModel)]="endAge" formControlName='endAge' />
-    <button nz-button nzType="primary" (click)='findCars(name,startAge,endAge)'>搜索</button>
+    <input style="width: 170px" nz-input placeholder="请输入车龄" formControlName='startAge' />
+    <input style="width: 170px" nz-input placeholder="请输入车龄" formControlName='endAge' />
+    <button nz-button nzType="primary" (click)='findCars()'>搜索</button>
     <button nz-button nzType="primary" (click)='cleanCars()'>清空</button>
     <button nz-button nzType="primary" (click)="createCar()">添加</button>
 </div>
-<nz-table #basicTable [nzData]="cars">
+<!-- {{form?.value.page}} -->
+<nz-table #basicTable [nzData]="cars" [nzShowPagination]='false'>
     <thead>
         <tr>
             <th>ID</th>
@@ -36,8 +37,9 @@
         </tr>
     </tbody>
 </nz-table>
-
-
+<nz-pagination (nzPageIndexChange)='chagePageIndex($event)' [nzDisabled]='disablePaginator'
+    [nzPageIndex]="form?.value.page" [nzPageSize]='limit' [nzTotal]="total">
+</nz-pagination>
 <nz-modal [(nzVisible)]="isVisible" nzTitle="添加车辆" (nzOnCancel)="cancel()" (nzOnOk)="onSave()" [nzWidth]='600'
     nzOkText="保存" nzCancelText="取消">
     <app-cars-edit></app-cars-edit>

@@ -88,8 +88,6 @@ export class StudentListComponent implements OnInit {
   public editStudent(e) {
     this.editFormVisible = !this.editFormVisible;
     this.editForm.form.patchValue(e);
-    // console.log(this.editForm);
-
   }
 
 }

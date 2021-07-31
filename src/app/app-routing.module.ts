@@ -26,6 +26,8 @@ const routes: Routes = [
     { path: 'http-learn', loadChildren: () => import('./modules/http-learn/http-learn.module').then(m => m.HttpLearnModule) },
     { path: 'ant-learn', loadChildren: () => import('./modules/ant-learn/ant-learn.module').then(m => m.AntLearnModule) },
     { path: 'cars', loadChildren: () => import('./modules/cars/cars.module').then(m => m.CarsModule) },
+    { path: 'phones', loadChildren: () => import('./modules/phones/phones.module').then(m => m.PhonesModule) },
+    { path: 'observable-learn', loadChildren: () => import('./modules/observable-learn/observable-learn.module').then(m => m.ObservableLearnModule)},
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: '**', redirectTo: 'home' }
 ];

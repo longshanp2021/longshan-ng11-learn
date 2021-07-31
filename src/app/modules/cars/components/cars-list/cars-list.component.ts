@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CarsEditComponent } from "../cars-edit/cars-edit.component";
-import { ICar } from '../model/i-cars';
-import { CarsService } from "../service/cars.service";
+import { ICar } from '../../model/i-cars';
+import { CarsService } from "../../service/cars.service";
 import { NzModalService } from 'ng-zorro-antd/modal';
 import { FormBuilder, FormGroup } from '@angular/forms';
 

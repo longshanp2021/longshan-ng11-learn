@@ -12,7 +12,7 @@ export class StudentService {
     private http: HttpClient
   ) { }
 
-  public query(): Observable<Array<IStudent>> {
+  public query(): Observable<Array<IStudent>>{
     let url = `${this.apiGateway}/students`;
     return this.http.get<Array<IStudent>>(url);
   }

@@ -5,11 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TableLearnComponent } from './components/table-learn/table-learn.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewsComponent } from './components/home/news/news.component';
-import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { OrderComponent } from './components/order/order.component';
@@ -32,10 +29,7 @@ registerLocaleData(en);
         AppComponent,
         HomeComponent,
         TableLearnComponent,
-        HeroComponent,
-        HeroFormComponent,
         NewsComponent,
-        ParentComponent,
         ChildComponent,
         CommunicationComponent,
         OrderComponent,

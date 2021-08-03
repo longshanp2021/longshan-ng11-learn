@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChildComponent } from './components/child/child.component';
 import { CommunicationComponent } from './components/communication/communication.component';
-import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { HomeComponent } from './components/home/home.component';
 import { OrderComponent } from './components/order/order.component';
 import { TableLearnComponent } from './components/table-learn/table-learn.component';
@@ -11,7 +10,6 @@ import { TrainingComponent } from './components/training/training.component';
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'table-learn', component: TableLearnComponent },
-    { path: 'hero-form', component: HeroFormComponent },
     { path: 'hero', component: HomeComponent },
     { path: 'communication', component: CommunicationComponent },
     { path: 'order', component: OrderComponent },

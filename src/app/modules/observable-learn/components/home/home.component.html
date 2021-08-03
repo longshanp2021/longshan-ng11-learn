@@ -6,3 +6,17 @@
 <br>
 <br>
 <button (click)='xiaomingUnsubscript()'>小明取消订阅</button>
+
+<app-child [title]='TITLE' (emit)="addItem($event)"></app-child>
+
+<h4>子组件的值为:{{item}}</h4>
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<app-form-learn></app-form-learn>

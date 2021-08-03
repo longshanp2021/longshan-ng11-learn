@@ -11,7 +11,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./cars-list.component.scss']
 })
 export class CarsListComponent implements OnInit {
-
   @ViewChild(CarsEditComponent)
   public child: CarsEditComponent;
   public form: FormGroup;

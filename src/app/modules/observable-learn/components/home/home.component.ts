@@ -8,6 +8,8 @@ import { map, first, take } from "rxjs/operators";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public TITLE: string = 'lisa';
+  public item: string = '';
   public arr: Array<string> = ['小明', '乐乐', '小黑', '大明'];
   public msg: string = '大家好';
   public data = new Subject();
@@ -44,6 +46,10 @@ export class HomeComponent implements OnInit {
 
   public xiaomingReceiveTitle(s) {
     console.log(`消息为:${s}`);
+  }
+
+  addItem(newItem: string) {
+    this.item = newItem;
   }
 
 }

@@ -1,0 +1,22 @@
+<div [formGroup]='form'>
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <p>名字不能为空!</p>
+
+
+    <label>
+        Age:
+        <input type="text" formControlName="age">
+    </label>
+    <p *ngIf='formControls["age"].touched&&formControls["age"].errors?.required'>年龄不能为空!</p>
+</div>
+
+
+
+
+
+<p>
+    <button (click)="updateName()">Update Name</button>
+</p>

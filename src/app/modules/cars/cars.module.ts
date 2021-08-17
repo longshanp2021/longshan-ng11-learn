@@ -4,7 +4,7 @@ import { CarsRoutingModule } from './cars-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { CarsListComponent } from './components/cars-list/cars-list.component';
 import { CarsEditComponent } from './components/cars-edit/cars-edit.component';
-import { CarsService } from './components/service/cars.service';
+import { CarsService } from './service/cars.service';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';

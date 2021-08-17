@@ -1,0 +1,29 @@
+:host {
+    .box {
+        display: flex;
+        flex-direction: row;
+
+        .ipt-box {
+
+            margin-left: 8px;
+
+            label {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            input {
+                width: 200px;
+            }
+        }
+
+        .buttons {  
+            margin-left: 8px;
+
+            button {
+                margin-left: 8px;
+            }
+        }
+    }
+
+}

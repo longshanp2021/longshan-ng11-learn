@@ -1,0 +1,16 @@
+<div class="container" [formGroup]='form'>
+    <div class="ipt-name">
+        <label>
+            Name:
+            <input type="text" formControlName="name">
+        </label>
+        <p *ngIf='formControls["name"].touched&&formControls["name"].errors?.required'>名字不能为空!</p>
+    </div>
+    <div class="ipt-age">
+        <label>
+            Age:
+            <input type="text" formControlName="age">
+        </label>
+        <p *ngIf='formControls["age"].touched&&formControls["age"].errors?.required'>年龄不能为空!</p>
+    </div>
+</div>

@@ -5,11 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TableLearnComponent } from './components/table-learn/table-learn.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewsComponent } from './components/home/news/news.component';
-import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { OrderComponent } from './components/order/order.component';
@@ -23,6 +20,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { BookService } from './modules/book-learn/service/book.service';
 
 registerLocaleData(en);
 
@@ -32,10 +30,7 @@ registerLocaleData(en);
         AppComponent,
         HomeComponent,
         TableLearnComponent,
-        HeroComponent,
-        HeroFormComponent,
         NewsComponent,
-        ParentComponent,
         ChildComponent,
         CommunicationComponent,
         OrderComponent,
@@ -55,6 +50,7 @@ registerLocaleData(en);
         { provide: NZ_I18N, useValue: en_US },
         StorageService,
         FruitsService,
+        BookService
     ],
     bootstrap: [AppComponent]
 })

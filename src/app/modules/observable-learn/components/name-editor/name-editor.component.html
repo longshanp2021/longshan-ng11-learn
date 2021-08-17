@@ -1,0 +1,12 @@
+<form [formGroup]='form' (onSubmit)='onSubmit()'>
+
+    <label>
+        Name1:
+        <input type="text" formControlName='name1'>
+    </label>
+    <label>
+        Name2:
+        <input type="text" formControlName='name2'>
+    </label>
+</form>
+<button type="submit" [disabled]="!form.valid">Submit</button>

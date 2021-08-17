@@ -7,9 +7,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 })
 export class FormLearnComponent implements OnInit {
   public form: FormGroup;
-  constructor(
-    private fb: FormBuilder
-  ) {
+  constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       name: [undefined, [Validators.required]],
       age: [undefined, [Validators.required]]
@@ -23,8 +21,4 @@ export class FormLearnComponent implements OnInit {
     return this.form.controls;
   }
 
-  public updateName() {
-    console.log(1);
-
-  }
 }

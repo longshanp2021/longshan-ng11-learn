@@ -4922,5 +4922,22 @@
       "name": "魅族",
       "price": 2000
     }
+  ],
+  "book-learn": [
+    {
+      "id": 1,
+      "name": "JAVA",
+      "author": "哈哈哈"
+    },
+    {
+      "id": 2,
+      "name": "JAVAS",
+      "author": "呵呵呵"
+    },
+    {
+      "id": 2,
+      "name": "JAVAT",
+      "author": "嘿嘿嘿"
+    }
   ]
 }

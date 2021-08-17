@@ -26,7 +26,7 @@ export class PhoneListComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    // this.queryPhone();
+    this.queryPhone();
   }
 
   public queryPhone() {

@@ -1,0 +1,21 @@
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "Version 2.3.4",
+                "description": "Package version 2.3.4",
+                "files": [
+                    "./src/components/child/child.component.html"
+                ],
+            }
+        ],
+        "targets": [
+            {
+                "type": "zip",
+                "name": "my zip",
+                "description": "Create a ZIP file in a target directory",
+                "target": "./deploy "
+            }
+        ]
+    }
+}

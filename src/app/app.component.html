@@ -17,38 +17,49 @@
     <a class="nav" routerLink="/training" routerLinkActive="active">消息订阅练习</a>
     <a class="nav" routerLink="/students" routerLinkActive="active">项目实战</a>
     <a class="nav" routerLink="/fruits" routerLinkActive="active">项目实战2</a> -->
-    <ul nz-menu nzMode="inline" nzTheme="dark">
-        <li nz-submenu nzTitle="Angular学习" nzIcon="coffee" [nzOpen]='menuOpen'>
-            <ul>
-                <li nz-menu-item (click)='goto("/http-learn/home")'>http</li>
-                <li nz-menu-item (click)='goto("/http-learn/broadcast")'>消息订阅</li>
-                <li nz-menu-item (click)='goto("/observable-learn/home")'>RXJS练习</li>
-                <li nz-menu-item (click)='goto("/observable-learn/take-skip-tap-learn")'>操作符</li>
-            </ul>
-        </li>
-        <li nz-submenu nzTitle="项目实战" nzIcon="coffee" [nzOpen]='menuOpen'>
-            <ul>
-                <li nz-menu-item (click)='goto("/students/student-list")'>学生列表</li>
-                <li nz-menu-item (click)='goto("/fruits/fruits-list")'>水果列表</li>
-                <li nz-menu-item (click)='goto("/cars/cars-list")'>汽车列表</li>
-                <li nz-menu-item (click)='goto("/phones/phone-list")'>手机列表</li>
-                <li nz-menu-item (click)='goto("/book-learn/book-list")'>书籍列表</li>
-            </ul>
-        </li>
-        <li nz-submenu nzTitle="组件库学习" nzIcon="coffee" [nzOpen]='menuOpen'>
-            <ul>
-                <li nz-menu-item (click)='goto("/ant-learn/home")'>home</li>
-                <li nz-menu-item (click)='goto("/ant-learn/modal-learn")'>对话框学习</li>
-            </ul>
-        </li>
-        <li nz-submenu nzTitle="表单学习" nzIcon="coffee" [nzOpen]='menuOpen'>
-            <ul>
-                <li nz-menu-item (click)='goto("/form-learn/home")'>home</li>
-                <li nz-menu-item (click)='goto("/form-learn/form-reactive")'>响应式表单</li>
-            </ul>
-        </li>
-    </ul>
+
+    <div class="wrapper">
+        <ul nz-menu nzMode="inline" nzTheme="dark">
+            <li nz-submenu nzTitle="Angular学习" nzIcon="coffee" [nzOpen]='menuOpen'>
+                <ul>
+                    <li nz-menu-item (click)='goto("/http-learn/home")'>http</li>
+                    <li nz-menu-item (click)='goto("/http-learn/broadcast")'>消息订阅</li>
+                    <li nz-menu-item (click)='goto("/observable-learn/home")'>RXJS练习</li>
+                    <li nz-menu-item (click)='goto("/observable-learn/take-skip-tap-learn")'>操作符</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="项目实战" nzIcon="coffee" [nzOpen]='menuOpen'>
+                <ul>
+                    <li nz-menu-item (click)='goto("/students/student-list")'>学生列表</li>
+                    <li nz-menu-item (click)='goto("/fruits/fruits-list")'>水果列表</li>
+                    <li nz-menu-item (click)='goto("/cars/cars-list")'>汽车列表</li>
+                    <li nz-menu-item (click)='goto("/phones/phone-list")'>手机列表</li>
+                    <li nz-menu-item (click)='goto("/book-learn/book-list")'>书籍列表</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="组件库学习" nzIcon="coffee" [nzOpen]='menuOpen'>
+                <ul>
+                    <li nz-menu-item (click)='goto("/ant-learn/home")'>home</li>
+                    <li nz-menu-item (click)='goto("/ant-learn/modal-learn")'>对话框学习</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="表单学习" nzIcon="coffee" [nzOpen]='menuOpen'>
+                <ul>
+                    <li nz-menu-item (click)='goto("/form-learn/home")'>home</li>
+                    <li nz-menu-item (click)='goto("/form-learn/form-reactive")'>响应式表单</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="ng content学习" nzIcon="coffee" [nzOpen]='menuOpen'>
+                <ul>
+                    <li nz-menu-item (click)='goto("/content-learn/home")'>home</li>
+                    <li nz-menu-item (click)='goto("/content-learn/content")'>学习一</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="content">
-    <router-outlet></router-outlet>
+    <div class="wrapper router">
+        <router-outlet></router-outlet>
+    </div>
 </div>

@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #DBDBDB;
+    min-height: 120px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px gray;
+
+    // background-color: ;
+    div.content {
+        flex: 1;
+    }
+
+    div.footer {
+        height: 42px;
+        border-top: 1px solid #DBDBDB;
+        background-color: #E8F1FA;
+    }
+}

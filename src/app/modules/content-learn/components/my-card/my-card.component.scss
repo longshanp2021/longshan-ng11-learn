@@ -6,7 +6,11 @@
     border-radius: 4px;
     box-shadow: 2px 2px 5px gray;
 
-    // background-color: ;
+    div.header {
+        flex: 1;
+        background-color: pink;
+    }
+
     div.content {
         flex: 1;
     }

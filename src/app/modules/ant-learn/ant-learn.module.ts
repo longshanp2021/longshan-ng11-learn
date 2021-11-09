@@ -8,6 +8,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { ModalChildLearnComponent } from './components/modal-child-learn/modal-child-learn.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @NgModule({
   declarations: [HomeComponent, ModalLearnComponent, ModalChildLearnComponent],
@@ -18,7 +19,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzModalModule,
     FormsModule,
     ReactiveFormsModule,
-    NzFormModule
+    NzFormModule,
+    NzInputModule
   ]
 })
 export class AntLearnModule { }

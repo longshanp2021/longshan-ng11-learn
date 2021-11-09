@@ -44,7 +44,8 @@ registerLocaleData(en);
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        NzMenuModule
+        NzMenuModule,
+        
     ],
     providers: [
         { provide: NZ_I18N, useValue: en_US },

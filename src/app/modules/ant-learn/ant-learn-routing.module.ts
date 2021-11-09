@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ModalLearnComponent } from './components/modal-learn/modal-learn.component';
+import { ModalChildLearnComponent } from './components/modal-child-learn/modal-child-learn.component';
 
 const routes: Routes = [
   {
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'modal-learn',
-    component: ModalLearnComponent
+    path: 'zorro',
+    component: ModalChildLearnComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];

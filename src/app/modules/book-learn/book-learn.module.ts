@@ -5,7 +5,6 @@ import { BookLearnRoutingModule } from './book-learn-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -14,7 +13,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
   imports: [
     CommonModule,
     BookLearnRoutingModule,
-    NzTableModule
+    NzTableModule,
   ]
 })
 export class BookLearnModule { }

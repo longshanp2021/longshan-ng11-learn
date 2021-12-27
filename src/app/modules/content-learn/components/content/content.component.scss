@@ -15,20 +15,22 @@
         position: relative;
 
         .item1 {
+            margin-top: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 100px;
             width: 100px;
             height: 20px;
             background-color: rebeccapurple;
             border-radius: 6px;
             position: relative;
-            left: 200px;
-            margin-bottom: 100px;
+
         }
 
+        .move {}
+
         .item2 {
+            margin-top: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,6 +44,7 @@
         }
 
         .item3 {
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             align-items: center;

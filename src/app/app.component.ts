@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
@@ -7,10 +8,10 @@ import { Router } from "@angular/router";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    parentItem = 'lamp';
-    public menuOpen = true;
+
+
     public constructor(
-        private router: Router
+        private http: HttpClient
     ) {
 
     }
@@ -19,7 +20,24 @@ export class AppComponent implements OnInit {
 
     }
 
-    public goto(url: string): void {
-        this.router.navigateByUrl(url);
+    public requestByProxy(): void {
+        this.http.post('/api/auth/login', {
+            username: 'pu123456',
+            password: '123456'
+        }).subscribe(res => {
+            console.log(2, res);
+
+        });
     }
+
+    public request(): void {
+        this.http.post('http://localhost:3000/auth/login', {
+            username: 'pu123456',
+            password: '123456'
+        }).subscribe(res => {
+            console.log(1, res);
+
+        });
+    }
+
 }

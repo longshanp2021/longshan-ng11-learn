@@ -1,7 +1,0 @@
-@import '../../../../resources/lazy-module-home.scss';
-
-:host {
-    display: block;
-    @include LazyModuleHome;
-
-}

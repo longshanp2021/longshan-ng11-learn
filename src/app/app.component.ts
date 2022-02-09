@@ -7,10 +7,10 @@ import { Router } from "@angular/router";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    parentItem = 'lamp';
-    public menuOpen = true;
+
+    public name: string = '默认值';
     public constructor(
-        private router: Router
+
     ) {
 
     }
@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
 
     }
 
-    public goto(url: string): void {
-        this.router.navigateByUrl(url);
+    public valueChange(name: string) {
+        console.log('name change:', name);
     }
+
 }

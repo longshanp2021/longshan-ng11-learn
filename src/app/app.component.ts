@@ -9,6 +9,10 @@ import { Router } from "@angular/router";
 export class AppComponent implements OnInit {
 
     public name: string = '默认值';
+    public areaManage: any = {
+        area: 'baoshan',
+        county: 'dachang'
+    };
     public constructor(
 
     ) {
@@ -23,4 +27,7 @@ export class AppComponent implements OnInit {
         console.log('name change:', name);
     }
 
+    public areaChange(val: any) {
+        console.log('area cccc:', val);
+    }
 }

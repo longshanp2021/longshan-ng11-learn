@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+    <label>区:</label>
+    <select formControlName='area'>
+        <option [value]="it.code" *ngFor='let it of areas'>{{it.name}}</option>
+    </select>
+    <label>镇:</label>
+    <select formControlName='county'>
+        <option [value]="it.code" *ngFor='let it of counties'>{{it.name}}</option>
+    </select>
+</form>
+<button (click)='reset()'>清空</button>

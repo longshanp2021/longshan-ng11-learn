@@ -12,6 +12,9 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MyInputComponent } from './my-input/my-input.component';
 import { CustomInputComponent } from './custom-input/custom-input.component';
+import { ContentComponent } from './content/content.component';
+import { ContentChildAComponent } from './content/content-child-a/content-child-a.component';
+import { ContentChildBComponent } from './content/content-child-b/content-child-b.component';
 
 registerLocaleData(en);
 
@@ -21,6 +24,9 @@ registerLocaleData(en);
         AppComponent,
         MyInputComponent,
         CustomInputComponent,
+        ContentComponent,
+        ContentChildAComponent,
+        ContentChildBComponent,
     ],
     imports: [
         BrowserModule,

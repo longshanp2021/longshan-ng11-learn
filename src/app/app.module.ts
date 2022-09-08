@@ -11,6 +11,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MyInputComponent } from './my-input/my-input.component';
+import { CustomInputComponent } from './custom-input/custom-input.component';
 
 registerLocaleData(en);
 
@@ -19,6 +20,7 @@ registerLocaleData(en);
     declarations: [
         AppComponent,
         MyInputComponent,
+        CustomInputComponent,
     ],
     imports: [
         BrowserModule,

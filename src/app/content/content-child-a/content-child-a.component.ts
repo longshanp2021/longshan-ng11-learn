@@ -19,7 +19,7 @@ export class ContentChildAComponent implements OnInit, AfterContentInit {
   ngOnInit(): void {}
 
   ngAfterContentInit(): void {
-    console.log(888);
-    console.log(this.contentB.fun());
+    //通过ContentChild装饰器操作投影进来的内容(组件)进行操作.
+    // console.log(this.contentB.fun());
   }
 }

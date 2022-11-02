@@ -1,12 +1,17 @@
 <h2>自定义表单</h2>
 <form [formGroup]="form">
-    <div class="nameContainer">
-        <label>姓名：</label>
-        <input type="text" formControlName="name">
+    <div class="areaContainer">
+        <label>区域:</label>
+        <select formControlName="area">
+            <option label="请选择"></option>
+            <option *ngFor="let item of areaData">{{item}}</option>
+        </select>
     </div>
-    <div >
-        <label>年龄：</label>
-        <input type="text" formControlName="age">
+    <div class="townContainer">
+        <label>街镇:</label>
+        <select formControlName="town">
+            <option label="请选择"></option>
+            <option *ngFor="let item of townData">{{item}}</option>
+        </select>
     </div>
-
 </form>

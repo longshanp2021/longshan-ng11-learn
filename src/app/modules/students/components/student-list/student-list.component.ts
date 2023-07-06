@@ -69,6 +69,10 @@ export class StudentListComponent implements OnInit {
   }
 
   public findStudent(): void {
+    this.studentSrv.riverPersonQuery().subscribe((res:any)=>{
+      console.log(res);
+      
+    })
   }
 
   public deleteStudent(id: any) {

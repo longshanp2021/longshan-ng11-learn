@@ -1,0 +1,20 @@
+{
+  "/productionApi": {
+    "target": "https://hzz.swj.sh.gov.cn:8010",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/productionApi": ""
+    }
+  },
+  "/testApi": {
+    "target": "https://api.rivers.kalendsoft.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/testApi": ""
+    }
+  }
+}

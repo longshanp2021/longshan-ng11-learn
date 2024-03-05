@@ -28,4 +28,8 @@ export class StudentService {
   public patch(id: any, data: IStudent) {
     return this.http.patch<IStudent>(`${this.apiGateway}/students/${id}`, data)
   }
+
+  riverPersonQuery(){
+    return this.http.get(`/productionApi/inspector-plan/getData/?offset=0&limit=15&type=河长制&startTime=2022-01-01&endTime=2023-07-31`)
+  }
 }

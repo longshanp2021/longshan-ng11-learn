@@ -21,6 +21,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { BookService } from './modules/book-learn/service/book.service';
+import { httpInterceptorProviders } from './http-interceptors';
 
 registerLocaleData(en);
 
@@ -49,6 +50,8 @@ registerLocaleData(en);
     ],
     providers: [
         { provide: NZ_I18N, useValue: en_US },
+        //注入令牌
+        httpInterceptorProviders,
         StorageService,
         FruitsService,
         BookService
